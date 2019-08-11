@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Instagram Ido</string>
+    <string name="log_in">Log In</string>
+    <string name="forget_details_login">Forgot your Password? Get help signing in</string>
 </resources>

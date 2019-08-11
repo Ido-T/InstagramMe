@@ -1,42 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:layout_margin="10dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/bg_login">
 
+        <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guidelineLeft"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guidelineRight"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp"/>
+
+    <TextView
+        android:id="@+id/tvInstagram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="72dp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        android:gravity="center"
+        android:text="Instagram"
+        android:textColor="@color/colorWhite"
+        android:textSize="45sp"
+        android:textStyle="italic"
+        app:fontFamily="@font/alex_brush"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <EditText
         android:id="@+id/etUsername"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        android:layout_marginTop="40dp"
+        android:padding="16dp"
+        android:textColorHint="@color/login_details"
+        android:hint=" Username "
         android:inputType="text"
-        android:hint="Username"
-        />
+        android:background="@color/login_details_light"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInstagram" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/etPassword"
+        android:background="@color/login_details_light"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:passwordToggleEnabled="true">
+        android:layout_marginTop="16dp"
+        android:hint=" Password "
+        android:textColorHint="@color/login_details"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/etUsername" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/etPassword"
-            android:hint="password"
-            android:inputType="textPassword"/>
-    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Login"
-        />
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_bg"
+        android:textAllCaps="false"
+        android:textColor="@color/login_details"
+        android:text="Log In Now"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
-</LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvForgetDetailsLogin"
+        android:text="@string/forget_details_login"
+        android:textSize="10sp"
+        android:textColor="@color/login_details"
+        android:textStyle="italic"
+        app:fontFamily="@font/architects_daughter"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        android:layout_margin="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
