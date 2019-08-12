@@ -6,30 +6,40 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_margin="0.2dp"
-    android:background="@color/colorBack"
+    android:background="@drawable/bg_main"
     tools:context=".MainActivity">
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etDescription"
+        android:textColorHint="@color/colorWhite"
+        android:hint="What's going on??"
         android:inputType="none"
         android:ems="10"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
         android:id="@+id/btnCaptureImage"
+
+        android:textColor="@color/colorWhite"
         android:text="Take Picture" />
 
     <ImageView
         android:id="@+id/ivPostImage"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="400dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:layout_height="300dp"
         tools:srcCompat="@tools:sample/avatars" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+
+        android:textColor="@color/colorWhite"
         android:id="@+id/btnSubmit"
         android:text="Submit"
         />
