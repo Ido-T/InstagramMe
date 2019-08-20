@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etDescription"
+        android:textColorHint="@color/colorWhite"
+        android:hint="What's going on??"
+        android:inputType="none"
+        android:ems="10"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+        android:id="@+id/btnCaptureImage"
+
+        android:textColor="@color/colorWhite"
+        android:text="Take Picture" />
+
+    <ImageView
+        android:id="@+id/ivPostImage"
+        android:layout_width="400dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:layout_height="300dp"
+        tools:srcCompat="@tools:sample/avatars" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+
+        android:textColor="@color/colorWhite"
+        android:id="@+id/btnSubmit"
+        android:text="Submit"
+        />
+
+</LinearLayout>
