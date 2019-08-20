@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.parse.LogInCallback;
@@ -18,6 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etUsername;
     private  EditText etPassword;
     private Button btnLogin;
+    private Button btnSignUp;
     private static final String TAG = "LoginActivity";
 
     @Override
@@ -28,6 +30,14 @@ public class LoginActivity extends AppCompatActivity {
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
+        btnSignUp = findViewById(R.id.btnSignUp);
+
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goSignUpActivity();
+            }
+        });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +48,12 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void goSignUpActivity() {
+        Intent i = new Intent(this, SignupActivity.class);
+        startActivity(i);
+        finish();
     }
 
     private void login(String username, String password) {

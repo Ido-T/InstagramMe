@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 29
+
     buildToolsVersion "29.0.1"
     defaultConfig {
         applicationId "com.example.instagramido"
@@ -33,4 +34,19 @@ dependencies {
     implementation "com.github.parse-community.Parse-SDK-Android:fcm:1.20.0"
     // for Kotlin extensions support (optional)
     implementation "com.github.parse-community.Parse-SDK-Android:ktx:1.20.0"
+
+
+    //navigation component
+    implementation 'android.arch.navigation:navigation-fragment-ktx:1.0.0-rc02'
+    implementation 'android.arch.navigation:navigation-fragment:1.0.0-rc02'
+    implementation 'android.arch.navigation:navigation-ui:1.0.0-rc02'
+    implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0-rc02'
+
+
+    //new material design
+    implementation 'com.google.android.material:material:1.0.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    // Glide v4 uses this new annotation processor -- see https://bumptech.github.io/glide/doc/generatedapi.html
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
 }
